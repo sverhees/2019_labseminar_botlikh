@@ -31,18 +31,11 @@ map.feature(hood$lang,
 
 
 # Create dataframe with some important toponyms in and around Botlikh
+shaitane <- data.frame(lat = c(42.6605719, 42.6690729, 42.663768, 42.655494), 
+                       lon = c(46.2146662, 46.201258, 46.223061, 46.1977715),
+                       lang = c("Botlikh"),
+                       place = c("Shait'ane", "Mikrorayon", "Old village", "Shogaɬi hani"))
 
-shaitane <- data.frame("lat" = c("42.6605719", "42.6690729", "42.663768", "42.655494"), 
-                       "lon" = c("46.2146662", "46.201258", "46.223061", "46.1977715"),
-                       "lang" = c("Botlikh"),
-                       "place" = c("Shait'ane", "Mikrorayon", "Old village", "Shogaɬi hani"))
-
-# Convert character vectors with coordinates to numeric
-
-shaitane$lat <- as.numeric(as.character(shaitane$lat))
-shaitane$lon <- as.numeric(as.character(shaitane$lon))
-
-shaitane$place <- factor(shaitane$place, levels = c("Old village", "Mikrorayon", "Shait'ane", "Shogaɬi hani"))
 
 # Map with neighborhood and Botlikh toponyms
 
